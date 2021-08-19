@@ -7,7 +7,10 @@
 - Nếu số lượng vòng epoch quá nhỏ, thì mạng có thể chưa đi được đến vị trí hội tụ cuối cùng. Nếu số epoch quá lớn sẽ dẫn đến tốn nhiều thời gian huấn luyện mà không tăng được kết quả và ngược  lại.
 - Tuy nhiên các đạo hàm sẽ có giá trị nhỏ hơn khi xuống các lớp thấp hơn, dẫn đến việc  kết quả cập nhật được thực hiện bởi gradient descent không làm thay đổi nhiều weight của các layer đó và làm cho chúng không thể hội tụ và máng sẽ không thu được kết quả tốt.
 - Bằng việc sử dụng một kết nối tắt đồng nhất xuyên qua nhiều một hay nhiều lớp. Một khói như vậy được gọi là residual block.
-![img.png](img.png)
+![image](https://user-images.githubusercontent.com/50827517/130039987-b04d5d2d-cd63-41e8-a28e-6ffb1491103d.png)
+
 - Mũi tên cong biểu thị cho sự bổ xung của input X vào đầu ra, việc này để chống lại việc đạo hàm bằng 0 do vẫn cộng thêm với X. 
-![img_1.png](img_1.png)
+![image](https://user-images.githubusercontent.com/50827517/130040038-41cce32e-9f9f-4749-b2d0-ded998ed5be5.png)
+
+
 - Trong đó các đường cong nét liền thể hiện cho việc đầu vào và đầu ra là cùng kích thước, còn đường cong nét đứt tương ứng thể hiện rằng đầu vào và đầu ra không cùng kích thước, nên phải có phép biến đổi kích thước của đầu vào cho cùng với kích thước của đầu ra.
